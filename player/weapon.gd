@@ -13,6 +13,6 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	var _mousePosition = get_local_mouse_position()
-	rotation = (atan2(_mousePosition.y,_mousePosition.x))
-	print(atan2(_mousePosition.y,_mousePosition.x))
+	var _mousePosition = get_global_mouse_position()
+	look_at(_mousePosition)
+	
